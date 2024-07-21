@@ -1,48 +1,47 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #7413dc; 
+    background-color: #f0f0f0; /* Light grey background color */
+    font-family: Arial, sans-serif; /* Add a default font family */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    color: #333; /* Default text color */
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+header, main, footer {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
 }
 
 nav a {
-    color: #fff;
-    margin: 0 1rem;
+    margin-right: 10px;
     text-decoration: none;
+    color: #007BFF;
+}
+nav a:hover {
+    text-decoration: underline;
 }
 
 #language-currency {
     margin-top: 1rem;
 }
 
-label {
+form label, form select, form input {
     display: block;
-    margin: 0.5rem 0 0.2rem;
+    margin-bottom: 10px;
 }
 
-input, select, button {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-button {
-    background-color: #333;
-    color: #fff;
+form button {
+    background-color: #007BFF;
+    color: white;
     border: none;
+    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #555;
-}
+    background-color: #0056b3;
 
 footer {
     background-color: #333;
@@ -59,7 +58,13 @@ form {
     margin: 1rem auto;
     max-width: 600px;
 }
-
+#results .flight-result {
+    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque for contrast */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
 .flight {
     background: #fff;
     padding: 1rem;
