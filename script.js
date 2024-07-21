@@ -30,14 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
    document.addEventListener('DOMContentLoaded', () => {
     // Логіка вибору рейсу
     document.getElementById('flight-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form from submitting the traditional way
+        event.preventDefault(); 
 
-        // Get form values
+       
         const from = document.getElementById('from').value;
         const to = document.getElementById('to').value;
         const date = document.getElementById('date').value;
 
-        // Dummy flight data for demonstration purposes
+      
         const flights = [
             { flightNumber: 'PS101', from: 'Київ', to: 'Іспанія', date: '2024-07-21', price: '20000 UAH' },
             { flightNumber: 'PS102', from: 'Київ', to: 'Туреччина', date: '2024-07-22', price: '15000 UAH' },
@@ -67,12 +67,11 @@ document.addEventListener('DOMContentLoaded', () => {
             { flightNumber: 'PS126', from: 'Київ', to: 'Чеська Республіка', date: '2024-08-15', price: '18000 UAH' },
         ];
 
-        // Filter flights based on form input
+       
         const results = flights.filter(flight => flight.from === from && flight.to === to && flight.date === date);
 
-        // Display results
         const resultsDiv = document.getElementById('results');
-        resultsDiv.innerHTML = ''; // Clear previous results
+        resultsDiv.innerHTML = ''; 
 
         if (results.length > 0) {
             results.forEach(flight => {
@@ -91,20 +90,4 @@ document.addEventListener('DOMContentLoaded', () => {
             resultsDiv.innerHTML = '<p>Немає доступних рейсів за вибраними критеріями.</p>';
         }
     });
-    // Зміна мови
-    document.getElementById('language')?.addEventListener('change', (event) => {
-        const lang = event.target.value;
-        if (lang === 'uk') {
-            document.documentElement.lang = 'uk';
-        } else {
-            document.documentElement.lang = 'en';
-        }
-        alert(`Мова сайту змінена на ${lang === 'uk' ? 'Українська' : 'English'}`);
-    });
 
-    // Зміна валюти
-    document.getElementById('currency')?.addEventListener('change', (event) => {
-        const currency = event.target.value;
-        alert(`Валюта сайту змінена на ${currency}`);
-    });
-});
