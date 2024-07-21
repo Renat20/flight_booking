@@ -4,11 +4,18 @@ body {
     background-position: center; 
     background-repeat: no-repeat; 
     background-attachment: fixed;
-    background-color: #7413dc; 
-    font-family: Arial, sans-serif;
-    margin: 0; 
-    padding: 0; 
-    color: #333; 
+ background-color:#eff1f4;
+  background-color:var(--color86,#eff1f4);
+  color:#212f3d;
+  color:var(--color23,#212f3d);
+  display:flex;
+  flex-direction:column;
+  font-family:Open Sans,Helvetica,Arial,sans-serif;
+  font-size:.875rem;
+  line-height:1.5;
+  min-height:100vh;
+  min-width:300px;
+  position:relative;
 }
 
 header, main, footer {
@@ -31,23 +38,32 @@ nav a:hover {
     margin-top: 1rem;
 }
 
-form label, form select, form input {
-    display: block;
-    margin-bottom: 10px;
+button,
+input,
+select,
+textarea {
+  color:inherit;
+  font-family:inherit;
+  font-size:inherit
 }
-
-form button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
+button,
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  background:none
 }
-
 button:hover {
-    background-color: #0056b3;
-
+    background-color: #0056b3;}
+input {
+  -webkit-appearance:none;
+  appearance:none;
+  -webkit-appearance:textfield;
+  appearance:textfield;
+  border-radius:0;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap
+}
 footer {
     background-color: #333;
     color: #fff;
