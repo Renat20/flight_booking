@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сервіс бронювання авіактивів</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Сервіс бронювання авіактивів</h1>
+        <nav>
+            <a href="index.html">Головна</a>
+            <a href="register.html">Реєстрація</a>
+            <a href="login.html">Авторизація</a>
+            <a href="profile.html">Мій профіль</a>
+        </nav>
+        <div id="language-currency">
+            <label for="language">Мова:</label>
+            <select id="language">
+                <option value="uk">Українська</option>
+                <option value="en">English</option>
+            </select>
+            <label for="currency">Валюта:</label>
+            <select id="currency">
+                <option value="UAH">UAH</option>
+                <option value="USD">USD</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Виберіть рейс</h2>
+            <form id="flight-form">
+                <label for="from">Звідки:</label>
+                <select id="from">
+                    <option value="Київ">Київ</option>
+                </select>
+                <label for="to">Куди:</label>
+                <select id="to">
+                    <option value="Іспанія">Київ → Іспанія</option>
+                    <option value="Туреччина">Київ → Туреччина</option>
+                    <option value="Італія">Київ → Італія</option>
+                    <option value="Німеччина">Київ → Німеччина</option>
+                    <option value="Греція">Київ → Греція</option>
+                    <option value="Сполучені Штати">Київ → Сполучені Штати</option>
+                    <option value="Польща">Київ → Польща</option>
+                    <option value="Франція">Київ → Франція</option>
+                    <option value="Сполучене Королівство">Київ → Сполучене Королівство</option>
+                    <option value="Об’єднані Арабські Емірати">Київ → Об’єднані Арабські Емірати</option>
+                    <option value="Грузія">Київ → Грузія</option>
+                    <option value="Португалія">Київ → Португалія</option>
+                    <option value="Єгипет">Київ → Єгипет</option>
+                    <option value="Японія">Київ → Японія</option>
+                    <option value="Таїланд">Київ → Таїланд</option>
+                    <option value="Нідерланди">Київ → Нідерланди</option>
+                    <option value="Хорватія">Київ → Хорватія</option>
+                    <option value="Південна Корея">Київ → Південна Корея</option>
+                    <option value="Індія">Київ → Індія</option>
+                    <option value="Норвегія">Київ → Норвегія</option>
+                    <option value="Канада">Київ → Канада</option>
+                    <option value="Австрія">Київ → Австрія</option>
+                    <option value="Швейцарія">Київ → Швейцарія</option>
+                    <option value="Кіпр">Київ → Кіпр</option>
+                    <option value="Болгарія">Київ → Болгарія</option>
+                    <option value="Чеська Республіка">Київ → Чеська Республіка</option>
+                </select>
+                <label for="date">Дата відправлення:</label>
+                <input type="date" id="date">
+                <button type="submit">Пошук</button>
+            </form>
+        </section>
+        <section id="flight-results">
+            <h2>Рейси</h2>
+            <div id="results">
+                <!-- Результати пошуку рейсів будуть тут -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Сервіс бронювання авіактивів</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
